@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+.black-panel{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #828589;
+  opacity: 0;
+}
+.black-panel.active{
+  opacity: 1;
+}
+.center{
+  position: fixed;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.center button{
+  
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background-color: #2196F3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.center button:hover{
+  background-color: #0b7dda;
+}
+.center button:active{
+  transform: scale(0.98);
+}
+.popup{
+  position: fixed;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
+  width: 450px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+.popup.active{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 300ms ease-in-out 0ms;
+}
+
+.popup .close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #0b7dda ;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.popup .close-btn:hover{
+  background-color: #065494 ;
+}
+.popup .form .form-element{
+  margin: 15px 0;
+}
+.form-element{
+  display: flex;
+  flex-direction: column;
+}
+.form > .form-element > .textarea{
+  margin: 10px 0;
+    padding: 5px 10px;
+}
+.form .form-element .input{
+  padding: 10px;
+  width: 100px;
+  align-self: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #0b7dda;
+}
+
